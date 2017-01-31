@@ -6,6 +6,7 @@ def call() {
     testResultBuilder.testsuites {
         testsuite(name: 'JUnitXmlReporter')
     }
-    def xml = stringWriter.toString()
+    String xml = stringWriter.toString()
+
     return xml
 }
