@@ -1,6 +1,6 @@
 import groovy.xml.MarkupBuilder
 
-def createJunitXml() {
+def call() {
     def stringWriter = new StringWriter()
     def testResultBuilder = new MarkupBuilder(stringWriter)
     testResultBuilder.testsuites {
