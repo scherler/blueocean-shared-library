@@ -1,4 +1,4 @@
-def call(String filename = 'TEST-some.xml') {
+def call() {
  def xmlMarkup = """
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
