@@ -1,4 +1,4 @@
-def call() {
+def call(String filename = 'TEST-some.xml') {
  def xmlMarkup = """
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
@@ -19,5 +19,15 @@ def call() {
    </testsuite>
 </testsuites>
 """
+ if(build.workspace.isRemote()) {
+    channel = build.workspace.channel;
+    fp = new FilePath(channel, build.workspace.toString() + "/" + filename)
+} else {
+    fp = new FilePath(new File(build.workspace.toString() + "/" + filename))
+}
+
+if(fp != null){
+    fp.write(xmlMarkup, null); //writing to file
+}
     return xmlMarkup
 }
