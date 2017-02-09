@@ -3,4 +3,5 @@ def call(max) {
     for (ii = 0; ii < max; ii++) {
         output << "Number ${ii}" << '\n'
     }
+    println "${output}"
 }
