@@ -1,5 +1,5 @@
 def call() {
-    (1..30000).each {
-        println "Number ${it}"
+    for (ii = 0; ii < 30000; ii++) 
+        println "Number ${ii}"
     }
 }
