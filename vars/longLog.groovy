@@ -1,5 +1,6 @@
 def call(max) {
+    def output
     for (ii = 0; ii < max; ii++) {
-        println "Number ${ii}"
+        output << "Number ${ii}" << '\n'
     }
 }
