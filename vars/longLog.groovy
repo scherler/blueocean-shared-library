@@ -1,5 +1,5 @@
-def call() {
-    for (ii = 0; ii < 30000; ii++) {
+def call(max) {
+    for (ii = 0; ii < max; ii++) {
         println "Number ${ii}"
     }
 }
